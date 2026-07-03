@@ -1,0 +1,51 @@
+{
+  "kenji":   { "kind": "humanoid", "o": { "skin": "#e0aa7c", "hair": "#16161c", "top": "#3a3d52", "bottom": "#22242f", "topknot": true, "gear": "katana", "gearColor": "#a8b0c0", "scar": true, "belt": "#6a2020" } },
+  "daiki":   { "kind": "humanoid", "o": { "skin": "#eab992", "hair": "#26221e", "top": "#2c3444", "bottom": "#232a37", "tie": "#a02030", "lapel": true, "gear": "case", "gearColor": "#3a2c1c", "scar": true } },
+  "vex":     { "kind": "humanoid", "o": { "skin": "#d8a087", "hair": "#d8d8e8", "top": "#33234a", "bottom": "#1e1830", "hat": "visor", "hatColor": "#141420", "gear": "gun", "gearColor": "#556", "scar": true, "belt": "#00e5c9" } },
+  "divine":  { "kind": "humanoid", "o": { "skin": "#f0d8b8", "hair": "#ffe98a", "top": "#e8e4ff", "bottom": "#cabffa", "hat": "halo", "longHair": true, "gear": "staff", "gearColor": "#ffffff", "belt": "#ffd23e" } },
+
+  "goro":    { "kind": "humanoid", "o": { "skin": "#c89068", "hair": "#3a2a1a", "top": "#5a4632", "bottom": "#3a3028", "beard": true, "gear": "staff", "gearColor": "#6a4a2a" } },
+  "kiku":    { "kind": "humanoid", "o": { "skin": "#e8bfa0", "hair": "#2a2a35", "top": "#4a3a5a", "bottom": "#2e2438", "hat": "hood", "hatColor": "#3a2e4a", "longHair": true } },
+  "sadao":   { "kind": "humanoid", "o": { "skin": "#d8b090", "hair": "#8a8a92", "top": "#3c4458", "bottom": "#282e3e", "hat": "kasa", "hatColor": "#443a28", "beard": true } },
+  "ryo":     { "kind": "humanoid", "o": { "skin": "#e0b090", "hair": "#8a5a2a", "top": "#6a3a5a", "bottom": "#42243a", "lapel": true, "tie": "#ffd23e" } },
+  "keiko":   { "kind": "humanoid", "o": { "skin": "#e8bfa0", "hair": "#1e1a24", "top": "#38404e", "bottom": "#242a36", "longHair": true, "lapel": true, "tie": "#3a7bc4" } },
+  "sho":     { "kind": "humanoid", "o": { "skin": "#c89068", "hair": "#2a2018", "top": "#4e5a3a", "bottom": "#343c26", "hat": "headband", "hatColor": "#e8e4da", "beard": true } },
+  "bit":     { "kind": "humanoid", "o": { "skin": "#e8bfa0", "hair": "#33aadd", "top": "#2a4a4a", "bottom": "#1c3232", "hat": "visor", "hatColor": "#00ffff", "gear": "staff", "gearColor": "#77ffff" } },
+  "dice":    { "kind": "humanoid", "o": { "skin": "#c8956a", "hair": "#ffdd44", "top": "#4a3a1a", "bottom": "#302610", "lapel": true, "tie": "#00ffff" } },
+  "nyx":     { "kind": "humanoid", "o": { "skin": "#d8a087", "hair": "#c86bff", "top": "#241c34", "bottom": "#161020", "hat": "hood", "hatColor": "#1c1428", "longHair": true } },
+
+  "sam_elder":   { "kind": "humanoid", "o": { "skin": "#d8b090", "hair": "#dddddd", "top": "#5a5242", "bottom": "#3e382c", "beard": true, "gear": "staff", "gearColor": "#8a7358" } },
+  "sam_oyu":     { "kind": "humanoid", "o": { "skin": "#eebfa0", "hair": "#3a2a20", "top": "#7a4a5a", "bottom": "#4e3038", "longHair": true } },
+  "sam_fuyu":    { "kind": "humanoid", "o": { "skin": "#d8a87c", "hair": "#222222", "top": "#6a5a3a", "bottom": "#443a24", "hat": "headband", "hatColor": "#8a7358" } },
+  "sam_widow":   { "kind": "humanoid", "o": { "skin": "#e0b090", "hair": "#4a4048", "top": "#4e4658", "bottom": "#322c3a", "longHair": true } },
+  "sam_farmer":  { "kind": "humanoid", "o": { "skin": "#c89068", "hair": "#2a2018", "top": "#5c6136", "bottom": "#3c4124", "hat": "kasa", "hatColor": "#6a5a2a" } },
+  "sam_kid":     { "kind": "humanoid", "o": { "skin": "#eebfa0", "hair": "#1a1a22", "top": "#a24545", "bottom": "#6a3535" } },
+  "hana":        { "kind": "humanoid", "o": { "skin": "#eebfa0", "hair": "#1a1a22", "top": "#a24545", "bottom": "#6a3535", "longHair": true } },
+
+  "biz_yui":     { "kind": "humanoid", "o": { "skin": "#eebfa0", "hair": "#3a2a40", "top": "#5a6274", "bottom": "#3a404e", "longHair": true } },
+  "biz_nakamura":{ "kind": "humanoid", "o": { "skin": "#d8a87c", "hair": "#26221e", "top": "#3c4050", "bottom": "#282c38", "tie": "#883333" } },
+  "biz_clerk":   { "kind": "humanoid", "o": { "skin": "#e0b090", "hair": "#4a8a4a", "top": "#3a7a5a", "bottom": "#2a5440", "hat": "cap", "hatColor": "#2a5440" } },
+  "biz_salaryman": { "kind": "humanoid", "o": { "skin": "#e0b090", "hair": "#222222", "top": "#33363e", "bottom": "#22242c", "tie": "#445566" } },
+
+  "cyb_juno":    { "kind": "humanoid", "o": { "skin": "#d8a087", "hair": "#ff8800", "top": "#4a4438", "bottom": "#302c24", "hat": "headband", "hatColor": "#ff8800" } },
+  "cyb_noodle":  { "kind": "humanoid", "o": { "skin": "#e0b090", "hair": "#222222", "top": "#7a3030", "bottom": "#4e2020", "hat": "headband", "hatColor": "#ffffff" } },
+  "ren":         { "kind": "humanoid", "o": { "skin": "#c8956a", "hair": "#1a1a20", "top": "#4a4438", "bottom": "#302c24", "hat": "hood", "hatColor": "#3a3428" } },
+
+  "sam_bandit":  { "kind": "humanoid", "o": { "skin": "#d8a87c", "hair": "#2a2018", "top": "#6a4a3a", "bottom": "#3a3028", "hat": "headband", "hatColor": "#a03030" } },
+  "sam_wolf":    { "kind": "beast", "o": { "col": "#6a6470", "dark": "#3a3640", "eye": "#ffd23e" } },
+  "sam_boss1":   { "kind": "humanoid", "o": { "skin": "#c89068", "hair": "#1a1410", "top": "#7a5a3a", "bottom": "#4a3828", "hat": "headband", "hatColor": "#c43a3a", "gear": "katana", "gearColor": "#a8b0c0", "beard": true } },
+  "biz_punk":    { "kind": "humanoid", "o": { "skin": "#e0b090", "hair": "#c9522a", "top": "#3a3a44", "bottom": "#26262e", "hat": "headband", "hatColor": "#222222" } },
+  "biz_thug":    { "kind": "humanoid", "o": { "skin": "#d8a87c", "hair": "#1a1a1e", "top": "#26262e", "bottom": "#1a1a20", "tie": "#555555", "lapel": true } },
+  "biz_dog":     { "kind": "beast", "o": { "col": "#4a4038", "dark": "#2c261e", "eye": "#ff4444" } },
+  "biz_boss1":   { "kind": "humanoid", "o": { "skin": "#d8a87c", "hair": "#15151a", "top": "#22222c", "bottom": "#17171e", "tie": "#a02030", "lapel": true, "hat": "visor", "hatColor": "#101014" } },
+  "cyb_drone":   { "kind": "mech", "o": { "col": "#5a6470", "dark": "#333a44", "glow": "#ff8800", "fly": true, "antenna": true } },
+  "cyb_ganger":  { "kind": "humanoid", "o": { "skin": "#d8a087", "hair": "#ee3333", "top": "#33234a", "bottom": "#1e1830", "hat": "visor", "hatColor": "#222222" } },
+  "cyb_hound":   { "kind": "beast", "o": { "col": "#3a3a48", "dark": "#22222c", "eye": "#00ffff", "cyber": true } },
+  "cyb_boss1":   { "kind": "humanoid", "o": { "skin": "#c8956a", "hair": "#ff22dd", "top": "#4a1a3a", "bottom": "#2e1024", "hat": "visor", "hatColor": "#1a0a14", "gear": "gun", "gearColor": "#666677" } },
+
+  "rift_wraith": { "kind": "blob", "o": { "col": "#5a4a8a", "dark": "#352a58", "eye": "#c86bff", "ghost": true } },
+  "time_devourer": { "kind": "beast", "o": { "col": "#3a2a5a", "dark": "#221838", "eye": "#ff2d95", "spikes": true } },
+  "conv_moment": { "kind": "blob", "o": { "col": "#4a3a6a", "dark": "#2c2244", "eye": "#ffe98a", "ghost": true } },
+  "kuroyami1":   { "kind": "demon", "o": { "col": "#3a1030", "dark": "#1a0518", "glow": "#ff2d95" } },
+  "kuroyami2":   { "kind": "demon", "o": { "col": "#180620", "dark": "#0a020e", "glow": "#c86bff" } }
+}
