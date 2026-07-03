@@ -18,11 +18,17 @@ import os
 import random
 import struct
 import wave
+import zlib
 
 from PIL import Image, ImageDraw
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "assets", "generated")
+
+
+def seed_of(s):
+    """Stable string seed (Python hash() is salted per process)."""
+    return zlib.crc32(s.encode()) & 0xFFFF
 
 
 def col(c, alpha=255):
@@ -425,7 +431,7 @@ GROUND_KINDS = ["floor", "hostile", "path", "dirt", "sand", "water_a", "water_b"
 
 def gen_tiles(theme):
     P = THEMES[theme]
-    rng = random.Random(hash(theme) & 0xFFFF)
+    rng = random.Random(seed_of(theme))
     img = Image.new("RGBA", (32 * 3, 32 * len(GROUND_KINDS)), (0, 0, 0, 0))
     for row, kind in enumerate(GROUND_KINDS):
         for v in range(3):
@@ -489,7 +495,7 @@ FEATURE_KINDS = ["tree", "deadtree", "bamboo", "rock", "pillar", "fence", "house
 
 def gen_features(theme):
     P = THEMES[theme]
-    rng = random.Random(hash(theme + "f") & 0xFFFF)
+    rng = random.Random(seed_of(theme + "f"))
     img = Image.new("RGBA", (32 * len(FEATURE_KINDS), 64), (0, 0, 0, 0))
     for i, kind in enumerate(FEATURE_KINDS):
         p = Px(32, 64)
@@ -595,7 +601,7 @@ def gen_backdrop(name):
     W, H = 960, 540
     img = Image.new("RGBA", (W, H), (0, 0, 0, 255))
     d = ImageDraw.Draw(img)
-    rng = random.Random(hash(name) & 0xFFFF)
+    rng = random.Random(seed_of(name))
 
     def ground(c, y=380):
         d.rectangle([0, y, W, H], fill=col(c))
@@ -773,7 +779,7 @@ def add_noise(buf, rng, t0, dur, peak, lowpass=1.0):
 
 def render_theme(name):
     th = AUDIO_THEMES[name]
-    rng = random.Random(hash(name) & 0xFFFF)
+    rng = random.Random(seed_of(name))
     spb = 60.0 / th["bpm"] / 2.0  # 8th notes
     steps = 64  # 8 bars of 8ths
     dur = steps * spb + 1.0
@@ -811,7 +817,7 @@ SFX = {}
 def build_sfx():
     def mk(name, fn, dur):
         buf = [0.0] * int(dur * SR)
-        fn(buf, random.Random(hash(name) & 0xFFFF))
+        fn(buf, random.Random(seed_of(name)))
         SFX[name] = buf
 
     mk("move", lambda b, r: add_tone(b, "sq", 880, 0, 0.005, 0.04, 0.10), 0.06)

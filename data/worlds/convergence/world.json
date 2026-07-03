@@ -1,0 +1,8 @@
+{
+  "name": "Outside Time",
+  "start": {"map": "conv_nexus", "x": 14, "y": 17},
+  "maps": ["conv_nexus"],
+  "chapters": [
+    {"goal": "Pass the Gate of Ash at the far north. End Kuroyami."}
+  ]
+}

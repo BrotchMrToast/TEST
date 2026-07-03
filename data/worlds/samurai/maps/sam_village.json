@@ -1,0 +1,48 @@
+{
+  "id": "sam_village", "name": "Ashen Village", "world": "samurai",
+  "theme": "sengoku", "grade": "ash", "amb": "ash", "music": "samurai", "bg": "ashvillage",
+  "rows": [
+    "##############################",
+    "#YY*..Y......====......Y..YYY#",
+    "#Y*.*.......=..........Y....Y#",
+    "#*.*.Y......=...HH..HH......Y#",
+    "#............=..HH..HH.......#",
+    "#.Y..........=...d....d......#",
+    "#....F.F.F...=...d....d......#",
+    "#............====d====d......#",
+    "#..HH..HH.......=............#",
+    "#..HH..HH.......=..+.........#",
+    "#....d..........=............#",
+    "#....d..========d========....#",
+    "#....d..=.......d.......=====#",
+    "#....dddd.......d............#",
+    "#......=........d....HH......#",
+    "#..Y...=....................Y#",
+    "#.YY...=......F.F.F..........#",
+    "#YYY...=.....................#",
+    "#############==###############"
+  ],
+  "spawn": {"x": 15, "y": 2},
+  "exits": [
+    {"x": 13, "y": 18, "w": 2, "to": "sam_over", "tx": 9, "ty": 21},
+    {"x": 28, "y": 12, "to": "sam_over", "tx": 9, "ty": 21, "req_chapter": 1,
+     "locked": "The east gate is blocked by hard men with soft morals."}
+  ],
+  "npcs": [
+    {"id": "sam_elder", "name": "Elder Michi", "x": 18, "y": 9, "color": "#e8d4a8", "quest": "q_sam_wolves", "still": true, "sprite": "sam_elder"},
+    {"id": "sam_oyu", "name": "Innkeep Oyu", "x": 5, "y": 9, "color": "#e8a0b8", "shop": "sam_shop_v", "sprite": "sam_oyu", "still": true,
+     "shop_line": "Half my stock burned. The other half is priced accordingly. Apologies."},
+    {"id": "sam_goro", "name": "Goro", "x": 8, "y": 4, "color": "#ff9a3c", "hire": "goro", "sprite": "goro"},
+    {"id": "sam_widow", "name": "Widow Take", "x": 12, "y": 13, "color": "#b8b0d0", "dialog": "sam_widow", "sprite": "sam_widow"},
+    {"id": "sam_farmer", "name": "Farmer Ryo", "x": 24, "y": 5, "color": "#b8b0d0", "dialog": "sam_farmer", "sprite": "sam_farmer"},
+    {"id": "sam_kid", "name": "Little Ume", "x": 17, "y": 13, "color": "#b8b0d0", "dialog": "sam_kid", "sprite": "sam_kid"}
+  ],
+  "chests": [
+    {"id": 1, "x": 2, "y": 2, "items": [{"id": "sam_a1", "n": 1}]},
+    {"id": 2, "x": 27, "y": 16, "items": [{"id": "sam_h1", "n": 2}], "gold": 50}
+  ],
+  "triggers": [
+    {"id": "boss1", "x": 26, "y": 11, "w": 2, "h": 3, "event": "sam_cs1", "chapter": 0}
+  ],
+  "signs": [{"x": 14, "y": 11, "text": "Ashen Village. Population: fewer."}]
+}

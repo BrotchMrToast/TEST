@@ -1,0 +1,54 @@
+{
+  "id": "cyb_over", "name": "Neo-Shizuoka Sprawl", "world": "cyber",
+  "theme": "cyber", "grade": "neon", "amb": "neonrain", "music": "cyber", "bg": "neon",
+  "rows": [
+    "####################################",
+    "#BBBB..BBBBBB....BBBB,,,,ssssssssss#",
+    "#BBBB..BBBBBB....BBBB,,,sssssssssss#",
+    "#......=....=......=,,,,ssssossssss#",
+    "#..=====....========,,,ssss,,,sssss#",
+    "#..=....nn......=,,,,,,sss,,,,,ssss#",
+    "#..=....nn......=,,,,,,ss,,o,,,,sss#",
+    "#..=............=,,,,,,ss,,,,,,,sss#",
+    "#..====..===..===,,,,,,sss,,,,ssss=#",
+    "#.....=..=.=....=,,,,,,,sss,,sssss=#",
+    "#.BB..=..=.=....==,,,,,,,ss,,,ssss=#",
+    "#.BB..====.======+=,,,,,,,,,,,sss==#",
+    "#.....=....=....==,,,,,,,,,,,,,,===#",
+    "#..o..=....=....=,,,,,o,,,,,,,,,,,,#",
+    "#..... =...=....=,,,,,,,,,,,o,,,,,,#",
+    "#..=====...======,,,,,,,,,,,,,,,,,,#",
+    "#..=...........=,,,,,,,,,,,,,,,,,,,#",
+    "#..=..BB..BB...=,,,o,,,,,,,,,,,,,,,#",
+    "#..=..BB..BB...==,,,,,,,,,,,,,,,,,,#",
+    "#..=...........==,,,,,,,,,,,,,,,,,,#",
+    "#..==========..==,,,,,,,,,,,,,,,,,,#",
+    "#...........=...=,,,,,,,,,,,,,,,,,,#",
+    "#...........=...=,,,,,,,,,,,,,,,,,,#",
+    "####################################"
+  ],
+  "spawn": {"x": 9, "y": 5},
+  "enc": {"groups": [["cyb_drone"], ["cyb_drone", "cyb_drone"], ["cyb_hound", "cyb_ganger"], ["cyb_ganger", "cyb_ganger"]]},
+  "exits": [
+    {"x": 9, "y": 4, "to": "cyb_bazaar", "tx": 16, "ty": 18},
+    {"x": 34, "y": 8, "w": 1, "h": 2, "to": "cyb_waste", "tx": 2, "ty": 2, "req_chapter": 2,
+     "locked": "Ch.2 — the Rust Dunes. A Ministry checkpoint blocks the dune road. (Full game)"},
+    {"x": 5, "y": 3, "to": "cyb_plaza", "tx": 2, "ty": 2, "req_chapter": 3,
+     "locked": "Ch.3 — Arcology Plaza. The scanners disapprove of you. (Full game)"},
+    {"x": 12, "y": 22, "to": "cyb_under", "tx": 2, "ty": 2, "req_chapter": 4,
+     "locked": "Ch.4 — the Undercity. The hatch is sealed from below. (Full game)"},
+    {"x": 18, "y": 3, "to": "cyb_fort", "tx": 2, "ty": 2, "req_chapter": 5,
+     "locked": "Ch.5 — the Ministry Citadel. DIRECTIVE ZERO IN EFFECT. (Full game)"}
+  ],
+  "npcs": [
+    {"id": "cyb_scavver", "name": "Dune Scavver", "x": 22, "y": 12, "color": "#b8b0d0", "dialog": "cyb_scavver", "sprite": "ren"}
+  ],
+  "chests": [
+    {"id": 1, "x": 30, "y": 6, "items": [{"id": "cyb_h1", "n": 2}], "gold": 50},
+    {"id": 2, "x": 4, "y": 22, "items": [{"id": "cyb_m1", "n": 2}], "gold": 60}
+  ],
+  "triggers": [
+    {"id": "rift", "x": 19, "y": 11, "w": 3, "event": "cyb_rift", "chapter": 1}
+  ],
+  "signs": [{"x": 16, "y": 12, "text": "Sprawl junction: NW bazaar · NE Citadel · W arcology · E Rust Dunes · S Undercity. Mind the drones. The maintenance shrine heals and remembers."}]
+}

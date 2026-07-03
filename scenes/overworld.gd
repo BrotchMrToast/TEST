@@ -515,6 +515,8 @@ func _check_triggers() -> void:
 			continue
 		if t.has("req_flag") and not c["flags"].has(String(t["req_flag"])):
 			continue
+		if t.has("not_flag") and c["flags"].has(String(t["not_flag"])):
+			continue
 		var rx := int(t["x"])
 		var ry := int(t["y"])
 		if tx < rx or tx >= rx + int(t.get("w", 1)) or ty < ry or ty >= ry + int(t.get("h", 1)):

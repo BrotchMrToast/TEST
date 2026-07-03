@@ -1,0 +1,10 @@
+{
+  "biz_coworker": [
+    {"min_chapter": 0, "lines": ["Mori-san, accounting says you flagged something in the Fourth Ledger? Word of advice: unflag it. People who read that ledger get promoted to \"missing\"."]},
+    {"min_chapter": 1, "lines": ["You're still alive! Don't take this wrong, but there was a betting pool."]}
+  ],
+  "biz_salaryman": [
+    {"min_chapter": 0, "lines": ["Overtime again. The lights in this district never turn off. Neither do we. We just… dim."]},
+    {"min_chapter": 1, "lines": ["Did the crossing signal just… blink backwards? I need sleep. Or less sleep. One of the two."]}
+  ]
+}

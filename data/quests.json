@@ -1,0 +1,38 @@
+{
+  "q_sam_wolves": {
+    "world": "samurai", "name": "Fangs in the Ash", "giver": "Elder Michi",
+    "desc": "Wolves grown bold on corpse-meat circle the village at night. Thin the pack — four should do.",
+    "offer": [
+      "The wolves have learned what battlefields leave behind. They circle us at night now.",
+      "Four of them lead the pack. Kill them on the province roads and my people sleep again."
+    ],
+    "mid": "The howling was closer last night. Please hurry.",
+    "turnin": ["The nights are quiet again. Take this — the village owes you more than it can pay."],
+    "stages": [{"text": "Hunt Grey Wolves on the province roads", "type": "kill", "target": "sam_wolf", "n": 4}],
+    "reward": {"gold": 120, "exp": 60, "items": [{"id": "sam_h2", "n": 2}]}
+  },
+  "q_biz_papers": {
+    "world": "business", "name": "Paper Trail", "giver": "Intern Yui",
+    "desc": "Yui can rebuild the shredded ledgers — if you liberate 3 pages from the thugs carrying them.",
+    "offer": [
+      "Mori-san! I know what they did to your accounts. I was the one who flagged the discrepancy, I am SO sorry.",
+      "The thugs carry the shredded pages in their jackets — too lazy to burn them. Bring me three and I can rebuild a month of laundering."
+    ],
+    "mid": "Check the thugs' jackets! Paper doesn't punch back, I promise.",
+    "turnin": ["Cross-referenced with the offshore transfers — Mori-san, this is a SMOKING GUN. Take my emergency fund. And my lucky tiepin!"],
+    "stages": [{"text": "Take Shredded Ledger Pages from Yakuza Thugs", "type": "item", "target": "biz_docs", "n": 3}],
+    "reward": {"gold": 150, "exp": 80, "items": [{"id": "biz_x1", "n": 1}]}
+  },
+  "q_cyb_parts": {
+    "world": "cyber", "name": "Servo Salvage", "giver": "Mechanic Juno",
+    "desc": "Juno needs 3 milspec servo cores. Scav drones are full of them. Full of bullets works too.",
+    "offer": [
+      "Vex! My supplier got \"nationalized\". I need milspec servo cores — three — or half this bazaar stops running.",
+      "Drones carry them. They explode if you ask nicely with a railgun."
+    ],
+    "mid": "Cores, Vex. The noodle stall's fryer is running on hope and one capacitor.",
+    "turnin": ["Beautiful. Barely dented! The bazaar eats tonight. Here — creds, and take the boots. Fell off a courier. The courier was fine. Mostly."],
+    "stages": [{"text": "Salvage Milspec Scrap from drones", "type": "item", "target": "cyb_scrap", "n": 3}],
+    "reward": {"gold": 150, "exp": 80, "items": [{"id": "cyb_x2", "n": 1}]}
+  }
+}
