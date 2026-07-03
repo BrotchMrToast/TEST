@@ -1,0 +1,47 @@
+{
+  "biz_intro": [
+    {"music": "business"},
+    {"say": [
+      {"text": "TOKYO, PRESENT DAY. Mori Daiki, 42. Chief Financial Officer of Hoshizora Trading. Married, one son, one mortgage, zero enemies. Until Tuesday."},
+      {"text": "On Tuesday you found the Fourth Ledger — the one that isn't in the system. Two decades of laundered money flowing through your company like a sewer under a shrine."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "I did everything right. Twenty years of doing everything right."},
+      {"text": "On Wednesday your CEO introduced you to a man with no neck and a Kurosawa-gumi pin. The message was simple: the ledger is yours now. The debt is yours now. The FAMILY is yours now."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "Fine. I'll smile. I'll bow. I'll carry their filth in my briefcase… and I will document every single yen of it. You bought an accountant, Kurosawa. You have no idea what accountants remember."}
+    ]},
+    {"chapter": 0}
+  ],
+  "biz_cs1": [
+    {"say": [
+      {"text": "The plaza east of your office. Mogi, the debt collector, waits with two thugs and your first \"assignment\" — beating a payment out of a man who looks like you did on Tuesday."},
+      {"who": "Debt Collector Mogi", "portrait": "biz_boss1", "color": "#c43a3a", "text": "First day, salaryman! Here's the job: Watanabe owes. You collect. Or we collect YOU. Consider it… onboarding."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "(Play along. Play along. Play al—) He has a family, Mogi."},
+      {"who": "Debt Collector Mogi", "portrait": "biz_boss1", "color": "#c43a3a", "text": "So do you. Oh — was that the wrong thing to say? Your face says it was the wrong thing to say."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "You know what, Mogi? Let's review your performance instead."}
+    ]},
+    {"battle": {"enemies": ["biz_boss1", "biz_thug", "biz_thug"], "bg": "office", "boss": true}},
+    {"shake": 8},
+    {"say": [
+      {"text": "Mogi wheezes on the pavement between two neat rows of his own teeth."},
+      {"who": "Mogi", "portrait": "biz_boss1", "color": "#c43a3a", "text": "You're… insane… the King runs collections in Kabukicho… he'll bury you under the club…"},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "Kabukicho, then. (And Mogi — you just became my first exhibit.)"},
+      {"text": "Overhead, the crossing signal has been blinking the same half-second of green for three minutes. Nobody else seems to notice. The metro junction sky looks… torn."}
+    ]},
+    {"gold": 90},
+    {"give": {"item": "biz_h1", "n": 2}},
+    {"chapter": 1},
+    {"heal": true}
+  ],
+  "biz_rift": [
+    {"shake": 10}, {"flash": true}, {"sfx": "rift"}, {"music": "rift"},
+    {"say": [
+      {"text": "At the metro junction the rain stops mid-air. A crane three blocks away hangs frozen mid-swing. Ten thousand commuters stand perfectly, horribly still."},
+      {"text": "The sky between the towers TEARS. Purple light. And through the wound you glimpse a burning village, a man with a katana — and a neon desert."},
+      {"who": "???", "color": "#c86bff", "text": "TWO OF THREE. FOUND. THE LOCK TURNS."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "The ledger — the numbers are moving — they're the same numbers, they were ALWAYS the same numbers — WHO ARE YOU?"},
+      {"text": "Your reflection in the office glass answers. It draws a sword you have never held, and aims a gun you have never fired."},
+      {"text": "— DAIKI'S STORY REACHES THE RIFT —", "color": "#c86bff"}
+    ]},
+    {"give": {"item": "key_shard2"}},
+    {"rift": true}
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "conv_opening": [
+    {"music": "rift"},
+    {"say": [
+      {"text": "There is a place between the ticks of every clock. A purple country where unfinished moments wash ashore. Three men arrive at the same instant, from three different centuries, through three different wounds in the world."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "Hana was pulled through the light — you! Suit-wearer! Your city was inside the rift that took her!"},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "My city? My family froze mid-breath because of THAT one — the neon mercenary! This has cyber-nonsense written all over it!"},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "Says the ghost in the grey suit wearing MY face. Both of you are wearing my face. Do you understand how far outside my job description this is?"},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "Your face? That scar over your eye — I EARNED that scar. My mother's killer gave it to me."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "No… I got mine the day Kurosawa took me. Same eye. Same scar. That's — that's not possible."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "Ministry checkpoint, 2081. Same eye. Same scar. …I don't like this math."},
+      {"text": "Three shards — vermilion, cobalt, violet — rise from three pockets and begin to HOWL. The suit swings his briefcase first."}
+    ]},
+    {"battle": {"enemies": ["echo_daiki"], "bg": "arena", "boss": true, "stop_at": 0.45, "party": "samurai", "music": "boss"}},
+    {"say": [
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "Yield! Your stance breaks the same way mine does — low on the left, where the old wound aches. I know it because it is MY wound."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "Fighting you feels like… arguing with myself in a mirror. And LOSING."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "Cute reunion. My turn. The three-voiced thing under the Ministry sent me here — which makes you two accessories to the worst week of my life."}
+    ]},
+    {"battle": {"enemies": ["echo_vex"], "bg": "arena", "boss": true, "stop_at": 0.45, "party": "business", "music": "boss"}},
+    {"shake": 10}, {"flash": true}, {"sfx": "rift"},
+    {"say": [
+      {"text": "The third exchange never lands. The sky of the rift-country opens like a lidless eye, and something older than calendars leans down to watch."},
+      {"who": "KUROYAMI", "portrait": "kuroyami1", "color": "#ff2d95", "text": "OH, DON'T STOP ON MY ACCOUNT. I HAVE WAITED THREE LIFETIMES FOR THIS DINNER THEATER."},
+      {"who": "KUROYAMI", "portrait": "kuroyami1", "color": "#ff2d95", "text": "YOU STILL DON'T REMEMBER? A STORY, THEN: ONCE, A TRAVELER LEARNED TO WALK BETWEEN THE HOURS. HE FOUND MY LARDER — THE MOMENTS I HARVEST FROM YOUR LITTLE WORLDS — AND HE OBJECTED."},
+      {"who": "KUROYAMI", "portrait": "kuroyami1", "color": "#ff2d95", "text": "HE FOUGHT ME. TOKIHITO, THE TIMELESS ONE. HE NEARLY WON. SO I DID WHAT ANY CHEF DOES WITH TOUGH MEAT: I CUT HIM IN THREE, WIPED THE MEMORY OFF EACH PIECE, AND SET THEM TO MARINATE IN SUFFERING."},
+      {"who": "KUROYAMI", "portrait": "kuroyami1", "color": "#ff2d95", "text": "A SON WHO LOSES A MOTHER. A FATHER WHO LOSES HIS NAME. A GUN WHO WILL LOSE HIS ONLY FRIEND. GRIEF IS THE FINEST SEASONING — AND YOU THREE ARE *DONE*."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "…The altar in the keep. Three voices."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "The numbers that were always the same numbers."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "The thing under the Ministry. It called me \"splinter\"."},
+      {"text": "Three shards ignite. Three scars burn on the same eye. Three hands — calloused by sword, briefcase, and trigger — reach for each other across five hundred years."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "For my mother. For Hana."},
+      {"who": "Daiki", "portrait": "daiki", "color": "#3a7bc4", "text": "For Yumi. For Kenta. For every cooked ledger."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "For Ren. …For me. For US."},
+      {"who": "Three Voices, One Voice", "color": "#ffe98a", "text": "I REMEMBER."}
+    ]},
+    {"flash": true}, {"sfx": "level"}, {"music": "divine"},
+    {"unify": true},
+    {"say": [
+      {"text": "Where three men stood, one figure remains — robes of unspent seconds, hair like dawn, and a blade that remembers every hand that ever held it."},
+      {"who": "Tokihito", "portrait": "divine", "color": "#ffe98a", "text": "Kuroyami — you fed on my worlds long enough. The Gate of Ash stands at the north of this nowhere. I am coming through it, and the hour between hours is coming OFF the menu."}
+    ]},
+    {"chapter": 0}, {"heal": true}
+  ],
+  "conv_final": [
+    {"music": "boss"},
+    {"say": [
+      {"text": "Beyond the Gate of Ash: a throne of stopped clocks, a floor of swallowed birthdays, and the Demon God of the Hour Between Hours, unbound and enormous."},
+      {"who": "KUROYAMI", "portrait": "kuroyami1", "color": "#ff2d95", "text": "THE MEAL SEATS ITSELF AT MY TABLE. BOLD. I ATE THE FOURTH CENTURY FOR LESS."},
+      {"who": "Tokihito", "portrait": "divine", "color": "#ffe98a", "text": "You cursed me into three griefs, demon. You made a boy bury his mother, a father sign away his name, a gunman aim at his friend. Here is what you failed to understand: grief does not tenderize. It TEMPERS."},
+      {"who": "KUROYAMI", "portrait": "kuroyami1", "color": "#ff2d95", "text": "THEN LET US TEST THE BLADE, LITTLE ETERNITY. COURSE ONE."}
+    ]},
+    {"battle": {"enemies": ["kuroyami1"], "bg": "arena", "boss": true, "music": "boss"}},
+    {"shake": 12}, {"flash": true},
+    {"say": [
+      {"text": "The demon god's form cracks like an egg of midnight — and what hatches is WORSE. The clocks on the throne begin to run backwards, screaming."},
+      {"who": "KUROYAMI UNBOUND", "portrait": "kuroyami2", "color": "#c86bff", "text": "FINE DINING IS OVER. NOW I EAT THE TABLE, THE CHAIRS, THE RESTAURANT, AND THE CONCEPT OF LUNCH."}
+    ]},
+    {"battle": {"enemies": ["kuroyami2"], "bg": "arena", "boss": true, "music": "boss"}},
+    {"flash": true}, {"sfx": "rift"}, {"music": "divine"},
+    {"say": [
+      {"text": "The Chrono Edge passes through Kuroyami and out the other side of midnight. For one instant, the demon god looks — relieved."},
+      {"who": "KUROYAMI", "portrait": "kuroyami2", "color": "#c86bff", "text": "AH. …SO THAT IS WHAT AN ENDING TASTES LIKE. I ALWAYS WONDERED WHY YOU MORTALS HOARD THEM—"},
+      {"text": "The hour between hours collapses gently, like a tent after a festival. And the Timeless One stands alone with three lifetimes in his hands and one choice left to make."},
+      {"who": "Tokihito", "portrait": "divine", "color": "#ffe98a", "text": "I could stay whole. Walk the centuries. But there is a sister waiting behind a rift, a family waiting on a frozen street, and an empty table at a bazaar bar. They don't need a god. They need HIM. And him. And him."},
+      {"who": "Tokihito", "portrait": "divine", "color": "#ffe98a", "text": "So — one soul, three mornings. Kuroyami split me as a punishment. I return as a promise."},
+      {"text": "VERMILION: the rift over the crossroads closes from the inside, and a ronin walks east under a moving sky, twice as sharp and half as alone."},
+      {"text": "COBALT: the crane finishes its swing, the commuters take their step, and an accountant walks into the Kurosawa-gumi's world carrying evidence and absolutely no fear."},
+      {"text": "VIOLET: a merc wakes at his table in the bazaar bar. Across from him, a friend who never missed a drink is just sitting down. \"Vex. About that WORLD-real favor—\" \"Yes,\" says Vex. \"Whatever it is: yes.\""},
+      {"text": "Somewhere between the ticks of every clock, there is a quiet purple country where nothing is ever eaten again."},
+      {"text": "— THE THREADS ARE ONE. —", "color": "#ffe98a"}
+    ]},
+    {"final_win": true},
+    {"credits": true}
+  ]
+}

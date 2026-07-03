@@ -1,0 +1,5 @@
+{
+  "sam_shop_v": {"name": "Oyu's General Store", "items": ["sam_h1", "sam_h2", "sam_m1", "sam_r1", "sam_w1", "sam_w2", "sam_a1", "sam_a2", "sam_x1", "sam_x2"]},
+  "biz_shop_conbini": {"name": "FamilyMart 24h", "items": ["biz_h1", "biz_h2", "biz_m1", "biz_r1", "biz_w1", "biz_w2", "biz_a1", "biz_a2", "biz_x1", "biz_x2"]},
+  "cyb_shop_bazaar": {"name": "Juno's Salvage Stall", "items": ["cyb_h1", "cyb_h2", "cyb_m1", "cyb_r1", "cyb_w1", "cyb_w2", "cyb_a1", "cyb_a2", "cyb_x1", "cyb_x2"]}
+}

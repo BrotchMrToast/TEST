@@ -1,0 +1,17 @@
+{
+  "name": "Tokyo · Present Day",
+  "start": {"map": "biz_office", "x": 15, "y": 16},
+  "intro": "biz_intro",
+  "maps": ["biz_office", "biz_over"],
+  "chapters": [
+    {"goal": "Ch.1 — Meet the \"welcome committee\" in the east plaza"},
+    {"goal": "Ch.2 — Something is wrong with the metro junction sky"}
+  ],
+  "future_chapters_note": "Chapters 2-5 plug in here: add maps/biz_kabuki.json etc., append chapter goals, extend cutscenes.json (biz_cs2..biz_cs5), and raise the req_chapter gates on biz_over's exits.",
+  "planned": [
+    "Ch.2 — Kabukicho: confront the Club King",
+    "Ch.3 — Marunouchi Towers: steal the Black Ledger from Fixer Queen Aoi",
+    "Ch.4 — Chiba countryside: protect your family from 'Smiling' Jiro",
+    "Ch.5 — Yokohama docks: Oyabun Kurosawa. Container 7. Midnight."
+  ]
+}

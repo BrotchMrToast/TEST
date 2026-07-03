@@ -1,0 +1,17 @@
+{
+  "name": "Neo-Shizuoka · 2087",
+  "start": {"map": "cyb_bazaar", "x": 16, "y": 18},
+  "intro": "cyb_intro",
+  "maps": ["cyb_bazaar", "cyb_over"],
+  "chapters": [
+    {"goal": "Ch.1 — Break Razor's hold on the bazaar (north gate)"},
+    {"goal": "Ch.2 — The sprawl junction sky is glitching. Investigate."}
+  ],
+  "future_chapters_note": "Chapters 2-5 plug in here: add maps/cyb_waste.json etc., append chapter goals, extend cutscenes.json (cyb_cs2..cyb_cs5), and raise the req_chapter gates on cyb_over's exits.",
+  "planned": [
+    "Ch.2 — Rust Dunes: the big contract goes catastrophically wrong",
+    "Ch.3 — Arcology Plaza: wanted, 2,000,000 creds",
+    "Ch.4 — The Undercity: the resistance and the broadcast spire",
+    "Ch.5 — Ministry Citadel: play Ren's chip on every screen in the city"
+  ]
+}

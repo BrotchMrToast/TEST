@@ -1,0 +1,44 @@
+{
+  "id": "biz_office", "name": "Shinjuku Office District", "world": "business",
+  "theme": "tokyo", "grade": "city", "amb": "rain", "music": "business", "bg": "office",
+  "rows": [
+    "##############################",
+    "#BBBB..BBBB....BBBB..BBBB...##",
+    "#BBBB..BBBB....BBBB..BBBB...##",
+    "#............................#",
+    "#..===========+===========..#",
+    "#..=......................=.#",
+    "#..=..BB....cc.....BB.....=.#",
+    "#..=..BB....cc.....BB.....=.#",
+    "#..=......................=.#",
+    "#..=====....====....======..#",
+    "#......=....=..=....=.......#",
+    "#..BB..=....=..=....=..BB...#",
+    "#..BB..======..======..BB...#",
+    "#............................#",
+    "#...F.F.F..........F.F.F....#",
+    "#............................#",
+    "#....BBBB....==....BBBB.....#",
+    "#....BBBB....==....BBBB.....#",
+    "#############==###############"
+  ],
+  "spawn": {"x": 15, "y": 16},
+  "exits": [
+    {"x": 13, "y": 18, "w": 2, "to": "biz_over", "tx": 10, "ty": 4}
+  ],
+  "npcs": [
+    {"id": "biz_yui", "name": "Intern Yui", "x": 8, "y": 8, "color": "#9adcff", "quest": "q_biz_papers", "sprite": "biz_yui"},
+    {"id": "biz_nakamura", "name": "Nakamura (Sales)", "x": 20, "y": 8, "color": "#b8b0d0", "dialog": "biz_coworker", "sprite": "biz_nakamura"},
+    {"id": "biz_conbini", "name": "Clerk Po", "x": 12, "y": 5, "color": "#ffd23e", "shop": "biz_shop_conbini", "still": true, "sprite": "biz_clerk",
+     "shop_line": "Irasshaimase~ Point card? No? Bag? No? …You just want the healing items. Understood."},
+    {"id": "biz_ryo", "name": "Ryo", "x": 24, "y": 10, "color": "#ffd23e", "hire": "ryo", "sprite": "ryo"}
+  ],
+  "chests": [
+    {"id": 1, "x": 3, "y": 13, "items": [{"id": "biz_a1", "n": 1}]},
+    {"id": 2, "x": 26, "y": 13, "items": [{"id": "biz_h1", "n": 2}], "gold": 50}
+  ],
+  "triggers": [
+    {"id": "boss1", "x": 24, "y": 3, "w": 3, "h": 1, "event": "biz_cs1", "chapter": 0}
+  ],
+  "signs": [{"x": 14, "y": 3, "text": "Hoshizora Trading HQ. \"Integrity, Growth, Family.\" Two of these are lies."}]
+}

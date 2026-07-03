@@ -1,0 +1,46 @@
+{
+  "id": "cyb_bazaar", "name": "Neon Bazaar", "world": "cyber",
+  "theme": "cyber", "grade": "neon", "amb": "neonrain", "music": "cyber", "bg": "neon",
+  "rows": [
+    "##################################",
+    "#BBBBBB,,BBBBBB,,BBBBBB,,BBBBBB###",
+    "#BBBBBB,,BBBBBB,,BBBBBB,,BBBBBB###",
+    "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+    "#,,nnnn,,,cc,cc,,,cc,cc,,,nnnn,,##",
+    "#,,nnnn,,,cc,cc,,,cc,cc,,,nnnn,,##",
+    "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+    "#,,cc,cc,,,nnnnnnnn,,,,cc,cc,,,,##",
+    "#,,cc,cc,,,n......n,,,,cc,cc,,,,##",
+    "#,,,,,,,,,,n......n,,,,,,,,,,,,,##",
+    "#,,,,,,,,,,nn,,,nnn,,,,,,,,,,,,,##",
+    "#,,BB,,,,,,,,,,,,,,,,,,,,,BB,,,,##",
+    "#,,BB,,,+,,,,,,,,,,,,,,,,,BB,,,,##",
+    "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+    "#,,,nnnnnn,,,,,,,,,,,,nnnnnn,,,,##",
+    "#,,,n....n,,,,,,,,,,,,n....n,,,,##",
+    "#,,,nnnnnn,,,,,,,,,,,,nn,nnn,,,,##",
+    "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,##",
+    "#,,,,F,F,,,,,,,,,,,,,,,,F,F,,,,,##",
+    "################==################"
+  ],
+  "spawn": {"x": 16, "y": 18},
+  "enc": {"groups": [["cyb_ganger"], ["cyb_ganger", "cyb_hound"], ["cyb_drone", "cyb_drone"], ["cyb_drone", "cyb_ganger"]]},
+  "exits": [
+    {"x": 16, "y": 19, "w": 2, "to": "cyb_over", "tx": 9, "ty": 5}
+  ],
+  "npcs": [
+    {"id": "cyb_juno", "name": "Mechanic Juno", "x": 6, "y": 6, "color": "#9adcff", "quest": "q_cyb_parts", "shop": "cyb_shop_bazaar", "still": true, "sprite": "cyb_juno",
+     "shop_line": "Salvage, stims, and second chances. Warranty void the moment you leave my stall. Or before."},
+    {"id": "cyb_noodle", "name": "Noodle Saint", "x": 20, "y": 6, "color": "#ffd23e", "dialog": "cyb_noodle", "still": true, "sprite": "cyb_noodle"},
+    {"id": "cyb_ren", "name": "Ren's Table", "x": 14, "y": 9, "color": "#7dffa0", "dialog": "cyb_ren_bar", "still": true, "sprite": "ren"},
+    {"id": "cyb_bit", "name": "Bit", "x": 21, "y": 9, "color": "#00e5c9", "hire": "bit", "sprite": "bit"}
+  ],
+  "chests": [
+    {"id": 1, "x": 3, "y": 17, "items": [{"id": "cyb_w2", "n": 1}]},
+    {"id": 2, "x": 30, "y": 13, "items": [{"id": "cyb_h1", "n": 3}], "gold": 80}
+  ],
+  "triggers": [
+    {"id": "boss1", "x": 15, "y": 1, "w": 2, "h": 2, "event": "cyb_cs1", "chapter": 0}
+  ],
+  "signs": [{"x": 15, "y": 10, "text": "THE LAST DROP — bar & bad decisions. Ren's table is the one by the heat vent."}]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "conv_nexus", "name": "The Hour Between Hours", "world": "convergence",
+  "theme": "rift", "grade": "rift", "amb": "motes", "music": "rift", "bg": "rift",
+  "rows": [
+    "##############################",
+    "#____________====____________#",
+    "#___________=,,,,=___________#",
+    "#______x,,,,,,,,,,,,,x_______#",
+    "#____,,,,,,,,,,,,,,,,,,,_____#",
+    "#___,,,,x,,,,,,,,,,,x,,,,____#",
+    "#__,,,,,,,,,,,,,,,,,,,,,,,___#",
+    "#__,,,x,,,,,P,,,,P,,,,,x,,___#",
+    "#__,,,,,,,,,,,,,,,,,,,,,,,___#",
+    "#___,,,,,,,,,,,,,,,,,,,,,____#",
+    "#____,,,,,,,,,+,,,,,,,,,_____#",
+    "#____,,,,,,,,,,,,,,,,,,,_____#",
+    "#___,,,,x,,,,,,,,,,x,,,,,____#",
+    "#__,,,,,,,,,,,,,,,,,,,,,,____#",
+    "#__,,,,,P,,,,,,,,,,,P,,,,,___#",
+    "#___,,,,,,,,,,,,,,,,,,,,,____#",
+    "#____x,,,,,,,,,,,,,,,,x______#",
+    "#_____,,,,,,,,,,,,,,,,_______#",
+    "#______,,,,,,==,,,,,,________#",
+    "#____________==______________#",
+    "##############################"
+  ],
+  "spawn": {"x": 14, "y": 17},
+  "enc": {"groups": [["rift_wraith"], ["rift_wraith", "rift_wraith"], ["time_devourer"], ["time_devourer", "rift_wraith"]]},
+  "exits": [],
+  "npcs": [
+    {"id": "conv_moment", "name": "A Stray Moment", "x": 6, "y": 8, "color": "#c86bff", "still": true, "dialog": "conv_moment", "sprite": "conv_moment"},
+    {"id": "conv_moment2", "name": "An Unspent Sunday", "x": 22, "y": 12, "color": "#c86bff", "still": true, "dialog": "conv_moment2", "sprite": "conv_moment"}
+  ],
+  "chests": [
+    {"id": 1, "x": 6, "y": 4, "items": [{"id": "div_h1", "n": 2}]},
+    {"id": 2, "x": 24, "y": 5, "items": [{"id": "div_h1", "n": 2}], "gold": 300}
+  ],
+  "triggers": [
+    {"id": "opening", "x": 8, "y": 13, "w": 14, "h": 6, "event": "conv_opening", "not_flag": "unified", "once": false},
+    {"id": "final", "x": 13, "y": 1, "w": 4, "h": 2, "event": "conv_final", "req_flag": "unified", "once": false}
+  ],
+  "signs": [{"x": 13, "y": 10, "text": "The shrine hums with borrowed time. North: the Gate of Ash. It knows you are coming. It has always known."}]
+}

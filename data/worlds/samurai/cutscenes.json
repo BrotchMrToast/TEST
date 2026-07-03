@@ -1,0 +1,45 @@
+{
+  "sam_intro": [
+    {"music": "samurai"},
+    {"say": [
+      {"text": "SENGOKU JAPAN, 1573. The province burns by inches. Lord Masakado taxes in rice, in iron, and lately — in children."},
+      {"text": "Three nights ago the Ashen Village learned why they call it that. You buried your mother this morning. There was not enough of her left to fill the urn."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "…The soil is still warm, mother. That is how I know the world is wrong."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "They took Hana east. Chains. She looked back — I was under the floorboards where you shoved me. I heard everything. I did nothing."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "Never again. I take your kitchen blade and I will trade up. Bandit, blade-master, captain, lord. Whatever stands between me and my sister — it bleeds."}
+    ]},
+    {"chapter": 0}
+  ],
+  "sam_cs1": [
+    {"say": [
+      {"text": "A wall of scarred men blocks the east road. Their chief picks his teeth with a knife you recognize — it hung above your mother's stove."},
+      {"who": "Bandit Chief Tetsuo", "portrait": "sam_boss1", "color": "#c43a3a", "text": "Ohh, the floorboard boy! We wondered if we missed one. Come to ask about the little sister?"},
+      {"who": "Bandit Chief Tetsuo", "portrait": "sam_boss1", "color": "#c43a3a", "text": "Sold her up the chain, boy. Gorobei took the pretty ones through the bamboo. The Lord pays triple for the ones with the \"sight\"."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "That knife. You will give it back now."},
+      {"who": "Bandit Chief Tetsuo", "portrait": "sam_boss1", "color": "#c43a3a", "text": "Heh. Point first, then."}
+    ]},
+    {"battle": {"enemies": ["sam_boss1", "sam_bandit", "sam_bandit"], "bg": "ashvillage", "boss": true}},
+    {"shake": 8},
+    {"say": [
+      {"text": "Tetsuo folds into the mud. The rain starts, as if the sky waited for permission."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "The kitchen knife goes home. The rest of you — feed the crows."},
+      {"text": "The east road is open. But as the rain falls UPWARD, every crow freezes mid-wingbeat. Something is wrong with the sky above the crossroads."}
+    ]},
+    {"gold": 80},
+    {"give": {"item": "sam_h1", "n": 2}},
+    {"chapter": 1},
+    {"heal": true}
+  ],
+  "sam_rift": [
+    {"shake": 10}, {"flash": true}, {"sfx": "rift"}, {"music": "rift"},
+    {"say": [
+      {"text": "At the crossroads shrine, the rain stands still in the air like glass beads. The shrine's flame burns backwards."},
+      {"text": "The sky above the torii TEARS. Purple light pours through the wound in the world — and inside it you see a city of glass towers, a man in a grey suit, a gun made of light."},
+      {"who": "???", "color": "#c86bff", "text": "ONE OF THREE. FOUND. THE LOCK TURNS."},
+      {"who": "Kenji", "portrait": "kenji", "color": "#c43a3a", "text": "Hana is beyond that light — I can FEEL it. Wait for me. Whatever wears my face on the other side had better step aside."},
+      {"text": "— KENJI'S STORY REACHES THE RIFT —", "color": "#c86bff"}
+    ]},
+    {"give": {"item": "key_shard1"}},
+    {"rift": true}
+  ]
+}

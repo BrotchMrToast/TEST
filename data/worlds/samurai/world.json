@@ -1,0 +1,17 @@
+{
+  "name": "Sengoku Japan · 1573",
+  "start": {"map": "sam_village", "x": 15, "y": 2},
+  "intro": "sam_intro",
+  "maps": ["sam_village", "sam_over"],
+  "chapters": [
+    {"goal": "Ch.1 — Cut down the Bandit Chief at the east gate"},
+    {"goal": "Ch.2 — Something tears the sky at the crossroads shrine"}
+  ],
+  "future_chapters_note": "Chapters 2-5 plug in here: add maps/sam_forest.json etc., append chapter goals, extend cutscenes.json (sam_cs2..sam_cs5), and raise the req_chapter gates on sam_over's exits. No code changes required.",
+  "planned": [
+    "Ch.2 — Whispering Bamboo: duel Gorobei, your mother's killer",
+    "Ch.3 — Kurogane Castle Town: break Captain Iwao's garrison",
+    "Ch.4 — Red Reed Marsh: find Hana's trail through the war camp",
+    "Ch.5 — Mount Onikura Keep: Lord Masakado. Save her."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "cyb_intro": [
+    {"music": "cyber"},
+    {"say": [
+      {"text": "NEO-SHIZUOKA, 2087. Population 40 million, employment rate \"classified\". The Ministry of Continuity governs by algorithm and drone. Everyone else governs by getting paid."},
+      {"text": "You are Vex Kurono: hired gun, licensed and rated four-and-a-half stars. You kill people who bad people say are worse people. The math usually holds."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "One more year of jobs. One more year, then I buy out my debt-contract, get the Ministry tracker cut out of my neck, and walk into the dunes a free man."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "Tonight: drinks with Ren at the bazaar bar — the only person in this city who talks to me like I'm a person. Then tomorrow, back to work."},
+      {"text": "The work finds you first. It always does."}
+    ]},
+    {"chapter": 0}
+  ],
+  "cyb_cs1": [
+    {"say": [
+      {"text": "Razor's gang has the bazaar's north gate chained. Stall-keepers pay in creds, teeth, or inventory."},
+      {"who": "Razor", "portrait": "cyb_boss1", "color": "#ff2d95", "text": "Vex Kurono! Four-and-a-half stars! Walk away, merc. The bazaar pays ME rent now."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "Juno fixes my gun. The noodle guy feeds me. The bar stocks Ren's whisky. You're threatening my entire support network, Razor."},
+      {"who": "Razor", "portrait": "cyb_boss1", "color": "#ff2d95", "text": "It's not personal, choom. It's business."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "Funny. That's exactly what I say."}
+    ]},
+    {"battle": {"enemies": ["cyb_boss1", "cyb_ganger", "cyb_ganger"], "bg": "neon", "boss": true}},
+    {"shake": 8},
+    {"say": [
+      {"text": "Razor's chrome stops twitching. The bazaar exhales. Your agent pings: NEW CONTRACT — priority, anonymous, pays SIX MONTHS of debt in one job."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "(Ren didn't show tonight. First time in three years.) …Whatever. Contract in the morning."},
+      {"text": "Outside, every ad-board in the sprawl junction flickers with the same frame of static — a jagged purple seam, there and gone. Your neck-tracker reads a time that does not exist: 25:61."}
+    ]},
+    {"gold": 90},
+    {"give": {"item": "cyb_h1", "n": 2}},
+    {"chapter": 1},
+    {"heal": true}
+  ],
+  "cyb_rift": [
+    {"shake": 10}, {"flash": true}, {"sfx": "rift"}, {"music": "rift"},
+    {"say": [
+      {"text": "At the sprawl junction the neon rain hangs in the air like beads of glass. Ten thousand drones hold position, perfectly, horribly still."},
+      {"text": "The sky between the arcology towers TEARS. Purple light. Through the wound: a burning village, a midnight dock — and two men wearing your soul."},
+      {"who": "???", "color": "#c86bff", "text": "THREE OF THREE. FOUND. THE LOCK TURNS. COME HOME, SPLINTER."},
+      {"who": "Vex", "portrait": "vex", "color": "#b229c9", "text": "The scar over my eye is burning. The samurai has it. The suit has it. …I really, REALLY don't like this math."},
+      {"text": "— VEX'S STORY REACHES THE RIFT —", "color": "#c86bff"}
+    ]},
+    {"give": {"item": "key_shard3"}},
+    {"rift": true}
+  ]
+}

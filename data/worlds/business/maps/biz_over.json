@@ -1,0 +1,54 @@
+{
+  "id": "biz_over", "name": "Greater Tokyo", "world": "business",
+  "theme": "tokyo", "grade": "city", "amb": "smog", "music": "business", "bg": "street",
+  "rows": [
+    "####################################",
+    "#BBBBBB..BBBB...BBB.....,,,,,,,,,,,#",
+    "#BBBBBB..BBBB...BBB..T,,,,,T,,,,,,,#",
+    "#....=....=......=....,,,,,,,,,,T,,#",
+    "#....=====+=======....,,,,T,,,,,,,,#",
+    "#BB..=....=......=..T,,,,,,,,,,,,,,#",
+    "#BB..=....=......====,,,,,,,T,,,,,,#",
+    "#....=..BBBB..BB....=,,,T,,,,,,,,,,#",
+    "#....=..BBBB..BB....====,,,,,,,,,,,#",
+    "#BB..=........==.......==,,,,,T,,,,#",
+    "#BB..======...==.........====,,,,,,#",
+    "#........=....==....T,,,,,,,==,,,,,#",
+    "#BBBB....=....==,,,,,,,,T,,,,==,T,,#",
+    "#BBBB....=....==,,,,,,,,,,,,,,=,,,,#",
+    "#....=====....==,,T,,,,,,,,,,,=====#",
+    "#....=........==,,,,,,~~~,,,,,,,,,,#",
+    "#BB..=....~~..==,,,,,~~~~~,,,,,,,,,#",
+    "#BB..=...~~~~.==,,,,,,~~~,,,T,,,,,,#",
+    "#....=....~~..==,,,,,,,,,,,,,,,,,,,#",
+    "#....=........==...,,,,,,,,,,,,,,,,#",
+    "#....==========.....,,,,,,,,,,,,,,,#",
+    "#..........=........,,,,T,,,,,,,,,,#",
+    "#..........=.......,,,,,,,,,,,,,,,,#",
+    "####################################"
+  ],
+  "spawn": {"x": 10, "y": 4},
+  "enc": {"groups": [["biz_punk"], ["biz_punk", "biz_punk"], ["biz_thug"], ["biz_thug", "biz_punk"], ["biz_dog", "biz_punk"]]},
+  "exits": [
+    {"x": 10, "y": 3, "to": "biz_office", "tx": 15, "ty": 16},
+    {"x": 17, "y": 3, "to": "biz_kabuki", "tx": 2, "ty": 2, "req_chapter": 2,
+     "locked": "Ch.2 — Kabukicho. The Club King's velvet rope is not for you yet. (Full game)"},
+    {"x": 5, "y": 3, "to": "biz_tower", "tx": 2, "ty": 2, "req_chapter": 3,
+     "locked": "Ch.3 — Marunouchi Towers. Floor 34 shreds pasts for a living. (Full game)"},
+    {"x": 34, "y": 14, "to": "biz_rural", "tx": 2, "ty": 2, "req_chapter": 4,
+     "locked": "Ch.4 — the Chiba countryside. Your family is hiding out there. (Full game)"},
+    {"x": 11, "y": 22, "to": "biz_docks", "tx": 2, "ty": 2, "req_chapter": 5,
+     "locked": "Ch.5 — Yokohama docks. Container 7 loads at midnight. (Full game)"}
+  ],
+  "npcs": [
+    {"id": "biz_salaryman", "name": "Tired Salaryman", "x": 8, "y": 10, "color": "#b8b0d0", "dialog": "biz_salaryman", "sprite": "biz_salaryman"}
+  ],
+  "chests": [
+    {"id": 1, "x": 33, "y": 2, "items": [{"id": "biz_h1", "n": 2}], "gold": 50},
+    {"id": 2, "x": 2, "y": 22, "items": [{"id": "biz_m1", "n": 2}], "gold": 60}
+  ],
+  "triggers": [
+    {"id": "rift", "x": 12, "y": 4, "w": 3, "event": "biz_rift", "chapter": 1}
+  ],
+  "signs": [{"x": 11, "y": 4, "text": "Metro junction: NORTH offices, towers & Kabukicho · EAST Chiba · SOUTH docks. The maintenance shrine heals and remembers."}]
+}

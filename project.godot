@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+
+config_version=5
+
+[application]
+
+config/name="TRINITY RIFT"
+config/description="Three Lives. One Soul. Zero Time. — an HD-2D multi-timeline RPG prototype."
+config/version="0.1.0"
+run/main_scene="res://scenes/title.tscn"
+config/features=PackedStringArray("4.4")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Db="*res://autoload/db.gd"
+GameState="*res://autoload/game_state.gd"
+AudioDirector="*res://autoload/audio_director.gd"
+SceneRouter="*res://autoload/scene_router.gd"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[rendering]
+
+renderer/rendering_method="forward_plus"
+renderer/rendering_method.mobile="mobile"
+textures/canvas_textures/default_texture_filter=0
+viewport/hdr_2d=true
+environment/defaults/default_clear_color=Color(0.02, 0.015, 0.04, 1)

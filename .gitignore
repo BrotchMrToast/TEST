@@ -1,0 +1,8 @@
+# Godot
+.godot/
+*.translation
+# engine binary (downloaded by tools/bootstrap.sh)
+tools/godot
+tools/godot.zip
+# python
+__pycache__/

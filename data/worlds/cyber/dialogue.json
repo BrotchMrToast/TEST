@@ -1,0 +1,13 @@
+{
+  "cyb_noodle": [
+    {"min_chapter": 0, "lines": ["Synth-ramen, best in the sprawl. The secret ingredient is that there are no ingredients."]}
+  ],
+  "cyb_ren_bar": [
+    {"min_chapter": 0, "lines": ["Same table as always, Vex. You look thin. Bad jobs or no jobs? …Listen. Soon I might need your help with something real. Not creds-real. WORLD-real. When I'm ready, you'll know."]},
+    {"min_chapter": 1, "lines": ["Ren still hasn't shown. The bartender keeps the table empty anyway. Something about tonight feels like a held breath."]}
+  ],
+  "cyb_scavver": [
+    {"min_chapter": 0, "lines": ["The dunes were a city once. Shizuoka-proper. Then the Ministry tested something and now it's beach, all the way down."]},
+    {"min_chapter": 1, "lines": ["You saw the sky glitch too? Forty years scavving and the sky never had a SEAM before."]}
+  ]
+}

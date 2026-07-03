@@ -1,0 +1,54 @@
+{
+  "id": "sam_over", "name": "Ashen Province", "world": "samurai",
+  "theme": "sengoku", "grade": "day", "amb": "petals", "music": "samurai", "bg": "rural",
+  "rows": [
+    "####################################",
+    "#^^^^^^^^^^^^^^^^^^^^^^^^^^^===^^^^#",
+    "#^^^^^,,,,,T,,,T,,,,,,,T,,,,===,,^^#",
+    "#^^,,,,,,,,,,,,,,,,,,,,,,,,,,=,,,,^#",
+    "#^,,,T,,,,,,T,,,,,,,,T,,,,,,,=,,,,,#",
+    "#,,,,,,,,,,,,,,,,,,,,,,,,,,,,=,,T,,#",
+    "#,T,,,,,,,,,,,,,,,,,,,,,,,,,,=,,,,,#",
+    "#,,,,,,,,,,,,,,,,,,,,,,,,~~,,=,,,,,#",
+    "#=,,,,T,,,,,,,,,,,,,,,,,~~~,,=,,,,,#",
+    "#=,,,,,,,,,,,,,,,,,,,,,,~~,,,=,,,,,#",
+    "#==,,,,,,,,,T,,,,,,,,,,,~~,,,=,,T,,#",
+    "#%%==,,,,,,,,,,,,,,,,,,,~~,,==,,,,,#",
+    "#%%%=,,,,T,,,====H=H====~~===,,,,,,#",
+    "#%%%=======++=====D=====------,,,,,#",
+    "#%%%,,,,,,,==,,,,,,,,,,,~~,,,==,,,,#",
+    "#,,,,,T,,,,=,,,,,,T,,,,,~~,,,,=,,,,#",
+    "#,,,,,,,,,,=,,,,,,,,,,,,~~,,,,====,#",
+    "#,T,,,,,,,,=,,,,,,,,,,,,~~,T,,,,,==#",
+    "#,,,,,,,,,,=,,,,,T,,,,,,~~,,,,,,,,=#",
+    "#,,,,T,,,,,=,,,,,,,,,,,,~~~,,,,T,,=#",
+    "#,,,,,,,,,,=,,,,,,,,,,,,,~~~,,,,,,,#",
+    "#,,,,,,,,,,=,,T,,,,,,,,,,,~~,,,,,,,#",
+    "#,,,,,,,,==,,,,,,,,,,,,,,,,,,,,,,,,#",
+    "####################################"
+  ],
+  "spawn": {"x": 9, "y": 21},
+  "enc": {"groups": [["sam_bandit"], ["sam_bandit", "sam_bandit"], ["sam_wolf", "sam_wolf"], ["sam_wolf", "sam_bandit"]]},
+  "exits": [
+    {"x": 9, "y": 22, "w": 2, "to": "sam_village", "tx": 13, "ty": 17},
+    {"x": 4, "y": 11, "h": 3, "to": "sam_forest", "tx": 2, "ty": 2, "req_chapter": 2,
+     "locked": "Ch.2 — the Whispering Bamboo. The trail of the white-haired killer starts here. (Full game)"},
+    {"x": 18, "y": 12, "to": "sam_town", "tx": 2, "ty": 2, "req_chapter": 3,
+     "locked": "Ch.3 — Kurogane Castle Town. The garrison bars every ronin. (Full game)"},
+    {"x": 34, "y": 16, "h": 3, "to": "sam_marsh", "tx": 2, "ty": 2, "req_chapter": 4,
+     "locked": "Ch.4 — Red Reed Marsh. Hana's trail runs through the war camp. (Full game)"},
+    {"x": 29, "y": 1, "w": 2, "to": "sam_keep", "tx": 2, "ty": 2, "req_chapter": 5,
+     "locked": "Ch.5 — Mount Onikura Keep. Lord Masakado waits. (Full game)"}
+  ],
+  "npcs": [
+    {"id": "sam_pilgrim", "name": "Pilgrim", "x": 14, "y": 14, "color": "#b8b0d0", "dialog": "sam_pilgrim", "sprite": "sadao"}
+  ],
+  "chests": [
+    {"id": 1, "x": 3, "y": 4, "items": [{"id": "sam_h1", "n": 2}], "gold": 40},
+    {"id": 2, "x": 33, "y": 20, "items": [{"id": "sam_m1", "n": 2}], "gold": 60}
+  ],
+  "triggers": [
+    {"id": "rift", "x": 14, "y": 13, "w": 3, "event": "sam_rift", "chapter": 1}
+  ],
+  "signs": [{"x": 10, "y": 13, "text": "Crossroads: WEST bamboo · NORTH mountain keep · EAST marsh · SOUTH Ashen Village. The shrine heals and remembers."}]
+}

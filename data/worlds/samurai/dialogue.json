@@ -1,0 +1,16 @@
+{
+  "sam_widow": [
+    {"min_chapter": 0, "lines": ["My boy watched them drag the girls east. He hasn't spoken since. Bring your sister back, Kenji. Bring them all back."]}
+  ],
+  "sam_farmer": [
+    {"min_chapter": 0, "lines": ["They came at dusk. Masakado's banner, but bandit manners. What kind of lord flies a flag over arson?"]},
+    {"min_chapter": 1, "lines": ["You broke the Chief's band? Then there is justice left in this province. A spoonful, anyway."]}
+  ],
+  "sam_kid": [
+    {"min_chapter": 0, "lines": ["When I grow up I'll have a sword too!", "Mister, your sword is bigger than me. That's so unfair."]}
+  ],
+  "sam_pilgrim": [
+    {"min_chapter": 0, "lines": ["The crossroads shrine heals the body and remembers the soul. Rest there, ronin — the roads only get redder from here."]},
+    {"min_chapter": 1, "lines": ["The sky above the shrine... I have walked this province forty years and the sky has never had a SEAM before."]}
+  ]
+}
