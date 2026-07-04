@@ -1,7 +1,7 @@
 # TRINITY RIFT — Godot 4 HD-2D RPG prototype
 
 **Three Lives. One Soul. Zero Time.** A 2.5D HD-2D-style RPG vertical slice built as a
-proper **Godot 4.4** project: three selectable protagonists in three timelines (Sengoku
+proper **Godot 4.7** project: three selectable protagonists in three timelines (Sengoku
 Japan / present-day Tokyo / cyberpunk 2087), FFVII-style active ATB combat with a Boost
 system, equipment, shops, chests, quests, hireable companions with personality archetypes,
 and a convergence finale where the three heroes discover they are one splintered
@@ -18,7 +18,7 @@ Every sprite, tile, backdrop, and music track is **generated procedurally** by
 ## Run it
 
 ```sh
-# one command: downloads Godot 4.4.1 into tools/, imports, checks, tests, screenshots
+# one command: downloads Godot 4.7 into tools/, imports, checks, tests, screenshots
 ./tools/bootstrap.sh
 
 # then play:
