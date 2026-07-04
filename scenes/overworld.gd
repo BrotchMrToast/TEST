@@ -41,7 +41,9 @@ const AMBIENCE := {
 	"smog": {"count": 14, "col": Color(0.47, 0.47, 0.55, 0.13), "vy": 0, "vx": 14, "spread": 6, "size": 20.0},
 }
 
-var diorama: Node3D
+# untyped by design: the diorama shell is a script-defined hub; dynamic access
+# avoids native-type member errors in the strict analyzer
+var diorama = null
 var map: Dictionary = {}
 var grid: Array = []                 # rows of strings
 var map_w := 0
@@ -214,7 +216,7 @@ func _build_features(theme: String) -> void:
 func _build_npcs() -> void:
 	var c: Dictionary = GameState.ch()
 	for def in map.get("npcs", []):
-		var hidden: bool = def.has("min_chapter") and int(c["chapter"]) < int(def["min_chapter"])
+		var is_hidden: bool = def.has("min_chapter") and int(c["chapter"]) < int(def["min_chapter"])
 		var node := Node2D.new()
 		node.position = Vector2(int(def["x"]) * TILE + 16, int(def["y"]) * TILE + 16)
 		var shadow := _shadow_sprite()
@@ -229,9 +231,9 @@ func _build_npcs() -> void:
 		mark.add_theme_color_override("font_outline_color", Color.BLACK)
 		mark.add_theme_constant_override("outline_size", 4)
 		node.add_child(mark)
-		node.visible = not hidden
+		node.visible = not is_hidden
 		entity_layer.add_child(node)
-		npcs.append({"def": def, "node": node, "spr": spr, "mark": mark, "hidden": hidden,
+		npcs.append({"def": def, "node": node, "spr": spr, "mark": mark, "hidden": is_hidden,
 			"dir": String(def.get("dir", "down")), "home": node.position,
 			"wander_t": randf() * 4.0, "target": Vector2.ZERO, "walking": false})
 
@@ -396,15 +398,15 @@ func _animate_environment(delta: float) -> void:
 		water_flip = not water_flip
 		var row := 6 if water_flip else 5
 		var sid := 0
-		for cell in water_cells:
-			var variant := (cell.x * 7 + cell.y * 13 + cell.x * cell.y) % 3
+		for cell: Vector2i in water_cells:
+			var variant: int = (cell.x * 7 + cell.y * 13 + cell.x * cell.y) % 3
 			tiles.set_cell(cell, sid, Vector2i(variant, row))
 	shrine_t += delta
 	if shrine_t > 0.5:
 		shrine_t = 0.0
-		for s in shrine_cells:
+		for s: Sprite2D in shrine_cells:
 			var col := int(s.region_rect.position.x / 32.0)
-			var next := FEATURE_COL["shrine_b"] if col == FEATURE_COL["shrine_a"] else FEATURE_COL["shrine_a"]
+			var next: int = FEATURE_COL["shrine_b"] if col == FEATURE_COL["shrine_a"] else FEATURE_COL["shrine_a"]
 			s.region_rect = Rect2(next * 32, 0, 32, 64)
 
 
@@ -492,7 +494,7 @@ func _check_exits() -> bool:
 		if e.has("req_chapter") and int(c["chapter"]) < int(e["req_chapter"]):
 			if e.has("locked"):
 				SceneRouter.toast(String(e["locked"]), Color("ff8080"))
-			var push := {"down": Vector2(0, -16), "up": Vector2(0, 16), "left": Vector2(16, 0), "right": Vector2(-16, 0)}[dir]
+			var push: Vector2 = {"down": Vector2(0, -16), "up": Vector2(0, 16), "left": Vector2(16, 0), "right": Vector2(-16, 0)}[dir]
 			player_pos += push
 			return true
 		var target := String(e["to"])
@@ -529,7 +531,7 @@ func _check_triggers() -> void:
 
 # ================= interaction =================
 func facing_point() -> Vector2:
-	var d := {"down": Vector2(0, 26), "up": Vector2(0, -26), "left": Vector2(-26, 0), "right": Vector2(26, 0)}[dir]
+	var d: Vector2 = {"down": Vector2(0, 26), "up": Vector2(0, -26), "left": Vector2(-26, 0), "right": Vector2(26, 0)}[dir]
 	return player_pos + d + Vector2(0, -6)
 
 

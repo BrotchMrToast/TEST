@@ -1,4 +1,7 @@
 extends Control
+
+const VW := 960.0
+const VH := 540.0
 ## Dialogue box — typewriter text, speaker name + portrait, branching choices.
 ## Lines: [{who, text, portrait, color, choices:[{label, action:Callable}]}]
 
@@ -11,7 +14,8 @@ var _on_done: Callable = Callable()
 
 
 func _ready() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
+	position = Vector2.ZERO
+	size = Vector2(VW, VH)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	visible = false
 
@@ -80,9 +84,9 @@ func _draw() -> void:
 		return
 	var line: Dictionary = lines[index]
 	var box_h := 128.0
-	var y := size.y - box_h - 14.0
+	var y := VH - box_h - 14.0
 	var x := 20.0
-	var w := size.x - 40.0
+	var w := VW - 40.0
 	var accent := Color(String(line.get("color", "#8878c8")))
 	_panel(Rect2(x, y, w, box_h), accent)
 	var tx := x + 22.0
@@ -110,7 +114,7 @@ func _draw() -> void:
 		draw_string(font, Vector2(x + w - 30, y + box_h - 14 + bob), "v", HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("8878c8"))
 	if typed and not choices.is_empty():
 		var cw := 320.0
-		var cx := size.x - cw - 34.0
+		var cx := VW - cw - 34.0
 		var cy := y - choices.size() * 30.0 - 18.0
 		_panel(Rect2(cx, cy, cw, choices.size() * 30.0 + 14.0), Color("ffd23e"))
 		for i in range(choices.size()):

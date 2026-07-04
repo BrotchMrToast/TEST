@@ -1,4 +1,7 @@
 extends Control
+
+const VW := 960.0
+const VH := 540.0
 ## Shop — buy/sell overlay driven by data/shops.json.
 
 var shop_id := ""
@@ -9,7 +12,8 @@ var _open := false
 
 
 func _ready() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
+	position = Vector2.ZERO
+	size = Vector2(VW, VH)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	visible = false
 
@@ -96,8 +100,8 @@ func _draw() -> void:
 		return
 	var c: Dictionary = GameState.ch()
 	var font := get_theme_default_font()
-	draw_rect(Rect2(0, 0, size.x, size.y), Color(0.015, 0.012, 0.04, 0.7))
-	var panel := Rect2(120, 50, size.x - 240, size.y - 120)
+	draw_rect(Rect2(0, 0, VW, VH), Color(0.015, 0.012, 0.04, 0.7))
+	var panel := Rect2(120, 50, VW - 240, VH - 120)
 	draw_rect(panel, Color(0.04, 0.03, 0.08, 0.96))
 	draw_rect(panel, Color("ffd23e"), false, 2.0)
 	draw_string(font, Vector2(150, 86), String(Db.shop(shop_id).get("name", "Shop")),
@@ -122,14 +126,14 @@ func _draw() -> void:
 			col = Color("6a6288") if i != idx else Color("aa9a6a")
 		draw_string(font, Vector2(150, 152 + i * 27), "%s %s" % ["> " if i == idx else "  ", name_txt],
 			HORIZONTAL_ALIGNMENT_LEFT, -1, 15, col)
-		draw_string(font, Vector2(size.x - 220, 152 + i * 27), str(price), HORIZONTAL_ALIGNMENT_LEFT, -1, 15, col)
+		draw_string(font, Vector2(VW - 220, 152 + i * 27), str(price), HORIZONTAL_ALIGNMENT_LEFT, -1, 15, col)
 	if idx < list.size():
 		var it: Dictionary = list[idx]["it"]
 		var stats := ""
 		for stat in ["atk", "def", "spd", "hp", "crit"]:
 			if it.has(stat):
 				stats += "%s+%d " % [stat.to_upper(), int(it[stat])]
-		draw_string(font, Vector2(150, size.y - 130), stats + ("— " + String(it.get("desc", "")) if it.has("desc") else ""),
-			HORIZONTAL_ALIGNMENT_LEFT, size.x - 320, 13, Color("9a94b8"))
+		draw_string(font, Vector2(150, VH - 130), stats + ("— " + String(it.get("desc", "")) if it.has("desc") else ""),
+			HORIZONTAL_ALIGNMENT_LEFT, VW - 320, 13, Color("9a94b8"))
 	if msg != "":
-		draw_string(font, Vector2(150, size.y - 86), msg, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("7dffa0"))
+		draw_string(font, Vector2(150, VH - 86), msg, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("7dffa0"))

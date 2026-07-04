@@ -19,12 +19,14 @@ func _ready() -> void:
 	add_child(layer)
 	fade_rect = ColorRect.new()
 	fade_rect.color = Color(0, 0, 0, 0)
-	fade_rect.set_anchors_preset(Control.PRESET_FULL_RECT)
+	fade_rect.position = Vector2.ZERO
+	fade_rect.size = Vector2(960, 540)
 	fade_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	layer.add_child(fade_rect)
 	toast_box = VBoxContainer.new()
-	toast_box.set_anchors_preset(Control.PRESET_CENTER_TOP)
 	toast_box.position = Vector2(0, 54)
+	toast_box.size = Vector2(960, 300)
+	toast_box.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	toast_box.alignment = BoxContainer.ALIGNMENT_BEGIN
 	layer.add_child(toast_box)
 
@@ -47,9 +49,14 @@ func _register_inputs() -> void:
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
 		for keycode in defs[action]:
+			# register BOTH physical (layout position) and label keycode so
+			# non-QWERTY layouts (e.g. German QWERTZ) work either way
 			var ev := InputEventKey.new()
 			ev.physical_keycode = keycode
 			InputMap.action_add_event(action, ev)
+			var ev_label := InputEventKey.new()
+			ev_label.keycode = keycode
+			InputMap.action_add_event(action, ev_label)
 	var pads := {
 		"confirm": JOY_BUTTON_A, "cancel": JOY_BUTTON_B, "menu": JOY_BUTTON_START,
 		"boost_up": JOY_BUTTON_RIGHT_SHOULDER, "boost_dn": JOY_BUTTON_LEFT_SHOULDER,
@@ -122,7 +129,8 @@ func enter_world(key: String) -> void:
 	fade_to(func(): get_tree().change_scene_to_file("res://scenes/diorama.tscn"), 0.8)
 
 
-func diorama() -> Node:
+func diorama():
+	# untyped return: the diorama shell is script-defined, callers use dynamic access
 	var cur := get_tree().current_scene
 	if cur != null and cur.has_method("start_battle"):
 		return cur
@@ -130,6 +138,6 @@ func diorama() -> Node:
 
 
 func start_battle(opts: Dictionary) -> void:
-	var d := diorama()
+	var d = diorama()
 	if d != null:
 		fade_to(func(): d.start_battle(opts), 0.6)

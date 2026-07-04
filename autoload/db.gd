@@ -100,12 +100,12 @@ func tex(path: String) -> Texture2D:
 	return t
 
 
-func sprite_tex(name: String) -> Texture2D:
-	return tex("res://assets/generated/sprites/%s.png" % name)
+func sprite_tex(sprite_name: String) -> Texture2D:
+	return tex("res://assets/generated/sprites/%s.png" % sprite_name)
 
 
-func portrait_tex(name: String) -> Texture2D:
-	var path := "res://assets/generated/portraits/%s.png" % name
+func portrait_tex(sprite_name: String) -> Texture2D:
+	var path := "res://assets/generated/portraits/%s.png" % sprite_name
 	if not ResourceLoader.exists(path):
 		return null
 	return tex(path)
@@ -119,25 +119,25 @@ func features_tex(theme: String) -> Texture2D:
 	return tex("res://assets/generated/features/%s.png" % theme)
 
 
-func backdrop_tex(name: String) -> Texture2D:
-	var path := "res://assets/generated/backdrops/%s.png" % name
+func backdrop_tex(backdrop_name: String) -> Texture2D:
+	var path := "res://assets/generated/backdrops/%s.png" % backdrop_name
 	if not ResourceLoader.exists(path):
 		path = "res://assets/generated/backdrops/rift.png"
 	return tex(path)
 
 
 ## Frame size for a sprite sheet (sheets are 3 cols x 3 rows).
-func sprite_frame_size(name: String) -> Vector2i:
-	var t := sprite_tex(name)
-	return Vector2i(t.get_width() / 3, t.get_height() / 3)
+func sprite_frame_size(sprite_name: String) -> Vector2i:
+	var t := sprite_tex(sprite_name)
+	return Vector2i(int(t.get_width() / 3.0), int(t.get_height() / 3.0))
 
 
 ## Load a generated WAV as an AudioStreamWAV (44-byte canonical header).
-func wav(name: String, looped: bool) -> AudioStreamWAV:
-	var key := name + ("_loop" if looped else "")
+func wav(wav_name: String, looped: bool) -> AudioStreamWAV:
+	var key := wav_name + ("_loop" if looped else "")
 	if _sfx_cache.has(key):
 		return _sfx_cache[key]
-	var path := "res://assets/generated/audio/%s.wav" % name
+	var path := "res://assets/generated/audio/%s.wav" % wav_name
 	if not FileAccess.file_exists(path):
 		return null
 	var bytes := FileAccess.get_file_as_bytes(path)
@@ -149,6 +149,6 @@ func wav(name: String, looped: bool) -> AudioStreamWAV:
 	if looped:
 		stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
 		stream.loop_begin = 0
-		stream.loop_end = (bytes.size() - 44) / 2
+		stream.loop_end = int((bytes.size() - 44) / 2.0)
 	_sfx_cache[key] = stream
 	return stream

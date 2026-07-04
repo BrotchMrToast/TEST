@@ -52,7 +52,7 @@ const COMP_SKILLS := {
 	],
 }
 
-var diorama: Node3D
+var diorama = null   # untyped: script-defined diorama shell, dynamic access
 var opts: Dictionary = {}
 var allies: Array = []
 var foes: Array = []

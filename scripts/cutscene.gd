@@ -4,7 +4,7 @@ extends Node
 ##        {sfx}|{music}|{chapter}|{quest}|{tp:{map,x,y}}
 ##        {battle:{enemies,bg,boss,stop_at,party}}|{rift}|{unify}|{final_win}|{credits}
 
-var diorama: Node3D
+var diorama = null   # untyped: script-defined diorama shell, dynamic access
 var active := false
 var _steps: Array = []
 var _index := -1
@@ -14,7 +14,8 @@ var _overlay: Control
 
 func _ready() -> void:
 	_overlay = Control.new()
-	_overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_overlay.position = Vector2.ZERO
+	_overlay.size = Vector2(960, 540)
 	_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_overlay.draw.connect(_draw_overlay)
 	diorama.ui.add_child(_overlay)
@@ -160,7 +161,7 @@ func _process(delta: float) -> void:
 
 
 func _draw_overlay() -> void:
-	var sz := _overlay.size
+	var sz := Vector2(960.0, 540.0)
 	if _flash > 0.0:
 		_overlay.draw_rect(Rect2(0, 0, sz.x, sz.y), Color(1, 1, 1, minf(1.0, _flash * 2.0)))
 	if active:

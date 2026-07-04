@@ -1,4 +1,7 @@
 extends Control
+
+const VW := 960.0
+const VH := 540.0
 ## Pause menu — Status / Items / Equip / Party / Quests / System tabs.
 
 const TABS := ["Status", "Items", "Equip", "Party", "Quests", "System"]
@@ -10,7 +13,8 @@ var _open := false
 
 
 func _ready() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
+	position = Vector2.ZERO
+	size = Vector2(VW, VH)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	visible = false
 
@@ -140,7 +144,7 @@ func _activate(c: Dictionary) -> void:
 			party.remove_at(idx)
 			msg = "%s left the party." % String(Db.companion(comp_id).get("name", comp_id))
 			AudioDirector.sfx("cancel")
-			var dio := get_parent().get_parent()
+			var dio = get_parent().get_parent()
 			if dio.world_node != null:
 				dio.world_node._rebuild_followers()
 		"System":
@@ -165,8 +169,8 @@ func _draw() -> void:
 	var c: Dictionary = GameState.ch()
 	var info := GameState.hero_info(GameState.current)
 	var font := get_theme_default_font()
-	draw_rect(Rect2(0, 0, size.x, size.y), Color(0.015, 0.012, 0.04, 0.8))
-	var panel := Rect2(40, 30, size.x - 80, size.y - 60)
+	draw_rect(Rect2(0, 0, VW, VH), Color(0.015, 0.012, 0.04, 0.8))
+	var panel := Rect2(40, 30, VW - 80, VH - 60)
 	draw_rect(panel, Color(0.04, 0.03, 0.08, 0.95))
 	draw_rect(panel, Color(info["color"]), false, 2.0)
 	for i in range(TABS.size()):
@@ -176,7 +180,7 @@ func _draw() -> void:
 			draw_rect(Rect2(x - 10, 44, 128, 30), Color("ffd23e"), false, 1.5)
 		draw_string(font, Vector2(x, 64), TABS[i], HORIZONTAL_ALIGNMENT_LEFT, -1, 15,
 			Color("ffd23e") if i == tab else Color("8a82a8"))
-	draw_line(Vector2(60, 84), Vector2(size.x - 60, 84), Color("3a3454"), 1.5)
+	draw_line(Vector2(60, 84), Vector2(VW - 60, 84), Color("3a3454"), 1.5)
 	var left := 80.0
 	var top := 122.0
 	match TABS[tab]:
@@ -221,8 +225,8 @@ func _draw() -> void:
 				draw_string(font, Vector2(left, top + i * 26), "%s %s x%d" % ["> " if i == idx else "  ", String(e["it"]["name"]), int(e["n"])],
 					HORIZONTAL_ALIGNMENT_LEFT, -1, 15, col)
 			if idx < items.size():
-				draw_string(font, Vector2(left, size.y - 100), String(items[idx]["it"].get("desc", "")),
-					HORIZONTAL_ALIGNMENT_LEFT, size.x - 200, 13, Color("9a94b8"))
+				draw_string(font, Vector2(left, VH - 100), String(items[idx]["it"].get("desc", "")),
+					HORIZONTAL_ALIGNMENT_LEFT, VW - 200, 13, Color("9a94b8"))
 		"Equip":
 			var gear := _equip_list(c)
 			draw_string(font, Vector2(left, top - 14), "Confirm to equip. Current gear returns to the bag.",
@@ -277,7 +281,7 @@ func _draw() -> void:
 				draw_string(font, Vector2(left, top + i * 30), "%s %s" % ["> " if i == idx else "  ", opts[i]],
 					HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("ffe98a") if i == idx else Color("e8e4f4"))
 	if msg != "":
-		draw_string(font, Vector2(left, size.y - 70), msg, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("7dffa0"))
+		draw_string(font, Vector2(left, VH - 70), msg, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("7dffa0"))
 
 
 func _equip_name(c: Dictionary, slot: String) -> String:

@@ -1,4 +1,7 @@
 extends Control
+
+const VW := 960.0
+const VH := 540.0
 ## Title screen: animated rift sky, the three silhouettes, press-confirm.
 
 var t := 0.0
@@ -41,8 +44,8 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	var w := size.x
-	var h := size.y
+	var w := VW
+	var h := VH
 	# sky
 	draw_rect(Rect2(0, 0, w, h), Color("0a0616"))
 	for band in range(20):

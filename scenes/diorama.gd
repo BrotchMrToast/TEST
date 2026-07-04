@@ -23,13 +23,14 @@ const GRADES := {
 var viewport: SubViewport
 var env: Environment
 var ui: CanvasLayer
-var world_node: Node2D = null        # overworld instance (kept alive during battles)
-var battle_node: Node2D = null
-var cutscene: Node = null
-var dialogue: Control = null
-var hud: Control = null
-var pause_menu: Control = null
-var shop_ui: Control = null
+# hub children are script-defined; kept untyped for dynamic member access
+var world_node = null                # overworld instance (kept alive during battles)
+var battle_node = null
+var cutscene = null
+var dialogue = null
+var hud = null
+var pause_menu = null
+var shop_ui = null
 var _shake_time := 0.0
 var _shake_mag := 0.0
 var _cam: Camera3D

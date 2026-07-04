@@ -1,4 +1,7 @@
 extends Control
+
+const VW := 960.0
+const VH := 540.0
 ## Character select — one panel per life; convergence panel unlocks
 ## once all three timelines have reached their rift.
 
@@ -57,8 +60,8 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	var w := size.x
-	var h := size.y
+	var w := VW
+	var h := VH
 	draw_rect(Rect2(0, 0, w, h), Color("07060c"))
 	var font := get_theme_default_font()
 	var list := panels()

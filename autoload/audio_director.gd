@@ -19,13 +19,13 @@ func _ready() -> void:
 		_sfx_players.append(p)
 
 
-func play_theme(name: String) -> void:
-	if name == _current_theme and _music.playing:
+func play_theme(theme_name: String) -> void:
+	if theme_name == _current_theme and _music.playing:
 		return
-	_current_theme = name
+	_current_theme = theme_name
 	if GameState.muted:
 		return
-	var stream := Db.wav("theme_" + name, true)
+	var stream := Db.wav("theme_" + theme_name, true)
 	if stream == null:
 		return
 	_music.stream = stream
@@ -47,10 +47,10 @@ func set_muted(m: bool) -> void:
 		play_theme(t)
 
 
-func sfx(name: String) -> void:
+func sfx(sfx_name: String) -> void:
 	if GameState.muted:
 		return
-	var stream := Db.wav("sfx_" + name, false)
+	var stream := Db.wav("sfx_" + sfx_name, false)
 	if stream == null:
 		return
 	for p in _sfx_players:

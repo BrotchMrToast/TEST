@@ -1,11 +1,15 @@
 extends Control
+
+const VW := 960.0
+const VH := 540.0
 ## Overworld HUD — hero vitals, gold, and the current chapter objective.
 
-var dio: Node = null
+var dio = null   # untyped: script-defined diorama shell, dynamic access
 
 
 func _ready() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
+	position = Vector2.ZERO
+	size = Vector2(VW, VH)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	dio = get_parent().get_parent()
 
@@ -44,6 +48,6 @@ func _draw() -> void:
 	if chapter < chapters.size():
 		var goal := "◆ " + String(chapters[chapter].get("goal", ""))
 		var tw := font.get_string_size(goal, HORIZONTAL_ALIGNMENT_LEFT, -1, 13).x + 24.0
-		draw_rect(Rect2(size.x - tw - 10, 10, tw, 30), Color(0.03, 0.02, 0.06, 0.75))
-		draw_rect(Rect2(size.x - tw - 10, 10, tw, 30), Color("3a3454"), false, 1.5)
-		draw_string(font, Vector2(size.x - tw + 2, 30), goal, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("9adcff"))
+		draw_rect(Rect2(VW - tw - 10, 10, tw, 30), Color(0.03, 0.02, 0.06, 0.75))
+		draw_rect(Rect2(VW - tw - 10, 10, tw, 30), Color("3a3454"), false, 1.5)
+		draw_string(font, Vector2(VW - tw + 2, 30), goal, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("9adcff"))

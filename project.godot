@@ -1,8 +1,16 @@
 ; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
 
 config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
@@ -10,7 +18,7 @@ config/name="TRINITY RIFT"
 config/description="Three Lives. One Soul. Zero Time. — an HD-2D multi-timeline RPG prototype."
 config/version="0.1.0"
 run/main_scene="res://scenes/title.tscn"
-config/features=PackedStringArray("4.4")
+config/features=PackedStringArray("4.7")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,12 +35,9 @@ window/size/viewport_height=540
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep"
 
 [rendering]
 
-renderer/rendering_method="forward_plus"
-renderer/rendering_method.mobile="mobile"
 textures/canvas_textures/default_texture_filter=0
 viewport/hdr_2d=true
 environment/defaults/default_clear_color=Color(0.02, 0.015, 0.04, 1)
