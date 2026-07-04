@@ -795,7 +795,7 @@ func _finish_lose() -> void:
 	if bool(opts.get("scripted", false)):
 		# scripted fights can't be lost — retry
 		var saved := opts
-		var dio := diorama
+		var dio = diorama
 		dio.end_battle("retry")
 		dio.start_battle(saved)
 		return
