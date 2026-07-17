@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/character_3d.gd" id="1_controller"]
+[ext_resource type="Texture2D" uid="uid://o0wtp0u0ss1l" path="res://assets/generated/sprites/kenji.png" id="2_kenji"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_character"]
+radius = 0.25
+height = 1.0
+
+[node name="Character3D" type="CharacterBody3D"]
+floor_snap_length = 0.2
+script = ExtResource("1_controller")
+sprite_sheet = ExtResource("2_kenji")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+position = Vector3(0, 0.6, 0)
+pixel_size = 0.025
+billboard = 2
+texture_filter = 0
+shaded = false
+double_sided = true
+texture = ExtResource("2_kenji")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 48)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0.5, 0)
+shape = SubResource("CapsuleShape3D_character")

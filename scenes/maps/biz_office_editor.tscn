@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2c86cr8uap8q"]
+
+[ext_resource type="PackedScene" path="res://scenes/characters/character_3d.tscn" id="1_character"]
+[ext_resource type="Script" path="res://scripts/camera_follow_3d.gd" id="2_camera"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+shading_mode = 0
+albedo_color = Color(0.811765, 0.866667, 0.92549, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
+material = SubResource("StandardMaterial3D_floor")
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_floor"]
+size = Vector3(20, 0.1, 20)
+
+[sub_resource type="Environment" id="Environment_office"]
+background_mode = 1
+background_color = Color(0.02, 0.015, 0.04, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.8, 0.82, 1, 1)
+ambient_light_energy = 0.6
+
+[node name="BizOfficeEditor" type="Node3D"]
+
+[node name="WorldRoot" type="Node3D" parent="."]
+
+[node name="Ground" type="Node3D" parent="WorldRoot"]
+
+[node name="Floor" type="MeshInstance3D" parent="WorldRoot/Ground"]
+mesh = SubResource("PlaneMesh_floor")
+
+[node name="FloorBody" type="StaticBody3D" parent="WorldRoot/Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldRoot/Ground/FloorBody"]
+position = Vector3(0, -0.05, 0)
+shape = SubResource("BoxShape3D_floor")
+
+[node name="Props" type="Node3D" parent="WorldRoot"]
+
+[node name="Characters" type="Node3D" parent="WorldRoot"]
+
+[node name="Kenji" parent="WorldRoot/Characters" instance=ExtResource("1_character")]
+
+[node name="Interactables" type="Node3D" parent="WorldRoot"]
+
+[node name="CameraRig" type="Node3D" parent="."]
+position = Vector3(0, 8, 8)
+rotation_degrees = Vector3(-45, 0, 0)
+script = ExtResource("2_camera")
+target_path = NodePath("../WorldRoot/Characters/Kenji")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+projection = 1
+current = true
+size = 10.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-55, -30, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_office")
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
